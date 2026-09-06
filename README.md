@@ -27,7 +27,8 @@ Here are the steps I have taken to understand the data:
 ### Modeling
 I have tried LinearRegression with different combination of features. As the null values exist in many columns, I removed the rows from the dataset with null values for selected features only to keep the database size relatively bigger for each model (compare to removing all rows where any of the columns was null for all remaining columns).
 For each model, I split the data into train and test after removing nulls for appropriate features and found mean squared error (mse) for each model.
-At the end, I found which model had least mse to find better model = combination of features which has higher effect on the price.
+At the end, I found model linreg8 had least mse to find better model = combination of features which has higher effect on the price.
 ### Evaluation
-
+Now we know the model which has least mse, however the model has multiple (7) columns. I used co-efficients to find relationship of the feature with car price prediction. Meaning, if the feature value will increase the price or decrease it. For non-numeric features, the values re pivoted into columns so each feature value has associated co-efficient.
 ### Deployment
+
